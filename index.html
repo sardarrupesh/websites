@@ -1,205 +1,675 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>MALWARE</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
 
-        <link rel="stylesheet" href="assets/css/styles.css">
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
 
-        <!-- =====BOX ICONS===== -->
-        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
 
-        <title>Portfolio website complete</title>
-    </head>
-    <body>
-        <!--===== HEADER =====-->
-        <header class="l-header">
-            <nav class="nav bd-grid">
-                <div>
-                    <a href="#" class="nav__logo">Marlon</a>
-                </div>
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
 
-                <div class="nav__menu" id="nav-menu">
-                    <ul class="nav__list">
-                        <li class="nav__item"><a href="#home" class="nav__link active">Home</a></li>
-                        <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
-                        <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
-                        <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
-                        <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
-                    </ul>
-                </div>
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
 
-                <div class="nav__toggle" id="nav-toggle">
-                    <i class='bx bx-menu'></i>
-                </div>
-            </nav>
-        </header>
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
 
-        <main class="l-main">
-            <!--===== HOME =====-->
-            <section class="home bd-grid" id="home">
-                <div class="home__data">
-                    <h1 class="home__title">Hi,<br>I'am <span class="home__title-color">Marlon</span><br> Web Designer</h1>
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
 
-                    <a href="#" class="button">Contact</a>
-                </div>
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
 
-                <div class="home__social">
-                    <a href="" class="home__social-icon"><i class='bx bxl-linkedin'></i></a>
-                    <a href="" class="home__social-icon"><i class='bx bxl-behance' ></i></a>
-                    <a href="" class="home__social-icon"><i class='bx bxl-github' ></i></a>
-                </div>
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
 
-                <div class="home__img">
-                    <svg class="home__blob" viewBox="0 0 479 467" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                        <mask id="mask0" mask-type="alpha">
-                            <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
-                        </mask>
-                        <g mask="url(#mask0)">
-                            <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
-                            <image class="home__blob-img" x="50" y="60" href="assets/img/perfil.png"/>
-                        </g>
-                    </svg>
-                </div>
-            </section>
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
 
-            <!--===== ABOUT =====-->
-            <section class="about section " id="about">
-                <h2 class="section-title">About</h2>
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
 
-                <div class="about__container bd-grid">
-                    <div class="about__img">
-                        <img src="assets/img/about.jpg" alt="">
-                    </div>
-                    
-                    <div>
-                        <h2 class="about__subtitle">I'am Marlon</h2>
-                        <p class="about__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate cum expedita quo culpa tempora, assumenda, quis fugiat ut voluptates soluta, aut earum nemo recusandae cumque perferendis! Recusandae alias accusamus atque.</p>           
-                    </div>                                   
-                </div>
-            </section>
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
 
-            <!--===== SKILLS =====-->
-            <section class="skills section" id="skills">
-                <h2 class="section-title">Skills</h2>
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
 
-                <div class="skills__container bd-grid">          
-                    <div>
-                        <h2 class="skills__subtitle">Profesional Skills</h2>
-                        <p class="skills__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit optio id vero amet, alias architecto consectetur error eum eaque sit.</p>
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bxl-html5 skills__icon'></i>
-                                <span class="skills__name">HTML5</span>
-                            </div>
-                            <div class="skills__bar skills__html">
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
 
-                            </div>
-                            <div>
-                                <span class="skills__percentage">95%</span>
-                            </div>
-                        </div>
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bxl-css3 skills__icon'></i>
-                                <span class="skills__name">CSS3</span>
-                            </div>
-                            <div class="skills__bar skills__css">
-                                
-                            </div>
-                            <div>
-                                <span class="skills__percentage">85%</span>
-                            </div>
-                        </div>
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bxl-javascript skills__icon' ></i>
-                                <span class="skills__name">JAVASCRIPT</span>
-                            </div>
-                            <div class="skills__bar skills__js">
-                                
-                            </div>
-                            <div>
-                                <span class="skills__percentage">65%</span>
-                            </div>
-                        </div>
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bxs-paint skills__icon'></i>
-                                <span class="skills__name">UX/UI</span>
-                            </div>
-                            <div class="skills__bar skills__ux">
-                                
-                            </div>
-                            <div>
-                                <span class="skills__percentage">85%</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div>              
-                        <img src="assets/img/work3.jpg" alt="" class="skills__img">
-                    </div>
-                </div>
-            </section>
+mark {
+	background-color: transparent;
+}
 
-            <!--===== WORK =====-->
-            <section class="work section" id="work">
-                <h2 class="section-title">Work</h2>
+.indented {
+	padding-left: 1.5em;
+}
 
-                <div class="work__container bd-grid">
-                    <a href="" class="work__img">
-                        <img src="assets/img/work1.jpg" alt="">
-                    </a>
-                    <a href="" class="work__img">
-                        <img src="assets/img/work2.jpg" alt="">
-                    </a>
-                    <a href="" class="work__img">
-                        <img src="assets/img/work3.jpg" alt="">
-                    </a>
-                    <a href="" class="work__img">
-                        <img src="assets/img/work4.jpg" alt="">
-                    </a>
-                    <a href="" class="work__img">
-                        <img src="assets/img/work5.jpg" alt="">
-                    </a>
-                    <a href="" class="work__img">
-                        <img src="assets/img/work6.jpg" alt="">
-                    </a>
-                </div>
-            </section>
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
 
-            <!--===== CONTACT =====-->
-            <section class="contact section" id="contact">
-                <h2 class="section-title">Contact</h2>
+img {
+	max-width: 100%;
+}
 
-                <div class="contact__container bd-grid">
-                    <form action="" class="contact__form">
-                        <input type="text" placeholder="Name" class="contact__input">
-                        <input type="mail" placeholder="Email" class="contact__input">
-                        <textarea name="" id="" cols="0" rows="10" class="contact__input"></textarea>
-                        <input type="button" value="Enviar" class="contact__button button">
-                    </form>
-                </div>
-            </section>
-        </main>
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
 
-        <!--===== FOOTER =====-->
-        <footer class="footer">
-            <p class="footer__title">Marlon</p>
-            <div class="footer__social">
-                <a href="#" class="footer__icon"><i class='bx bxl-facebook' ></i></a>
-                <a href="#" class="footer__icon"><i class='bx bxl-instagram' ></i></a>
-                <a href="#" class="footer__icon"><i class='bx bxl-twitter' ></i></a>
-            </div>
-            <p class="footer__copy">&#169; Bedimcode. All rigths reserved</p>
-        </footer>
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-translucentGray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="8b74ccff-b7e6-4efe-a30e-3da4d919418d" class="page sans"><header><img class="page-cover-image" src="MALWARE/michael-black-a5.jpg" style="object-position:center 50%"/><div class="page-header-icon page-header-icon-with-cover"><img class="icon" src="MALWARE/trick-or-treat-6474735-5349184.png"/></div><h1 class="page-title">MALWARE</h1></header><div class="page-body"><figure id="50a68347-77ae-4e8f-a6f4-8331845a779e" class="link-to-page"><a href="MALWARE/1%20Welcome%20Module%2050a6834777ae4e8fa6f48331845a779e.html">1. Welcome Module</a></figure><figure id="59fd7e6d-7aee-4b73-ba2f-baf1fedc5f76" class="link-to-page"><a href="MALWARE/2%20Introduction%20To%20Malware%20Development%2059fd7e6d7aee4b73ba2fbaf1fedc5f76.html">2. Introduction To Malware Development</a></figure><figure id="4fe7ff0b-0d17-4fa5-a6d1-ce0fd98d3197" class="link-to-page"><a href="MALWARE/3%20Required%20Tools%204fe7ff0b0d174fa5a6d1ce0fd98d3197.html">3. Required Tools</a></figure><figure id="2ff6d449-1575-4623-8ba8-c316b981337f" class="link-to-page"><a href="MALWARE/4%20Coding%20Basics%202ff6d449157546238ba8c316b981337f.html">4. Coding Basics</a></figure><figure id="012cf6ad-24cc-4d18-897c-d9414c274997" class="link-to-page"><a href="MALWARE/5%20Windows%20Architecture%20012cf6ad24cc4d18897cd9414c274997.html">5. Windows Architecture</a></figure><figure id="3de16d4b-afa3-4eb1-9106-dd2c5f0ff634" class="link-to-page"><a href="MALWARE/6%20Windows%20Memory%20Management%203de16d4bafa34eb19106dd2c5f0ff634.html">6. Windows Memory Management</a></figure><figure id="fe26cafb-df46-4e03-9dab-ea74013cf65d" class="link-to-page"><a href="MALWARE/7%20Introduction%20To%20The%20Windows%20API%20fe26cafbdf464e039dabea74013cf65d.html">7. Introduction To The Windows API</a></figure><figure id="a919d24f-6aa9-4a26-9876-6ef3f0bf5f21" class="link-to-page"><a href="MALWARE/8%20Portable%20Executable%20Format%20a919d24f6aa94a2698766ef3f0bf5f21.html">8. Portable Executable Format</a></figure><figure id="81450f16-51f7-4297-aa22-08e1dc397a4b" class="link-to-page"><a href="MALWARE/9%20Dynamic-Link%20Library%2081450f1651f74297aa2208e1dc397a4b.html">9. Dynamic-Link Library</a></figure><figure id="8ac0fec1-21da-4288-a3f8-20552bfc3af0" class="link-to-page"><a href="MALWARE/10%20Detection%20Mechanisms%208ac0fec121da4288a3f820552bfc3af0.html">10. Detection Mechanisms</a></figure><figure id="c1d18972-1d41-469b-8979-8a788d0ac581" class="link-to-page"><a href="MALWARE/11%20Windows%20Processes%20c1d189721d41469b89798a788d0ac581.html">11. Windows Processes</a></figure><figure id="a1b1542a-827d-4ff2-a42d-99a97ef9e01d" class="link-to-page"><a href="MALWARE/12%20Undocumented%20Structures%20a1b1542a827d4ff2a42d99a97ef9e01d.html">12. Undocumented Structures</a></figure><figure id="d402fbf8-9962-4362-8569-4d655c54d6c3" class="link-to-page"><a href="MALWARE/13%20Payload%20Placement%20-%20data%20&amp;%20rdata%20Sections%20d402fbf89962436285694d655c54d6c3.html">13. Payload Placement - .data &amp; .rdata Sections</a></figure><figure id="7d566afd-5019-4164-979a-fb40c3c311f3" class="link-to-page"><a href="MALWARE/14%20Payload%20Placement%20-%20text%20Section%207d566afd50194164979afb40c3c311f3.html">14. Payload Placement - .text Section</a></figure><figure id="c6369f39-7458-44c8-af17-d37db5a75eac" class="link-to-page"><a href="MALWARE/15%20Payload%20Placement%20-%20rsrc%20Section%20c6369f39745844c8af17d37db5a75eac.html">15. Payload Placement - .rsrc Section</a></figure><figure id="090b0d4b-ea19-4239-a37c-73d3e3b9124f" class="link-to-page"><a href="MALWARE/16%20Introduction%20To%20Payload%20Encryption%20090b0d4bea194239a37c73d3e3b9124f.html">16. Introduction To Payload Encryption</a></figure><figure id="e07626c5-43ae-4bc3-87b1-936bee6fbc00" class="link-to-page"><a href="MALWARE/17%20Payload%20Encryption%20-%20XOR%20e07626c543ae4bc387b1936bee6fbc00.html">17. Payload Encryption - XOR</a></figure><figure id="ff80fad2-bcc7-4e79-8b27-0bb1fddd1be2" class="link-to-page"><a href="MALWARE/18%20Payload%20Encryption%20-%20RC4%20ff80fad2bcc74e798b270bb1fddd1be2.html">18. Payload Encryption - RC4</a></figure><figure id="fa2ab3c6-213d-4a12-a139-4be735833ec7" class="link-to-page"><a href="MALWARE/19%20Payload%20Encryption%20-%20AES%20Encryption%20fa2ab3c6213d4a12a1394be735833ec7.html">19. Payload Encryption - AES Encryption</a></figure><figure id="ae933861-1191-42d1-92c7-c88c47e0c256" class="link-to-page"><a href="MALWARE/20%20Evading%20Microsoft%20Defender%20Static%20Analysis%20ae933861119142d192c7c88c47e0c256.html">20. Evading Microsoft Defender Static Analysis</a></figure><figure id="9f7b77ee-cf01-460d-8d89-8195f70f4790" class="link-to-page"><a href="MALWARE/21%20Payload%20Obfuscation%20-%20IPv4%20IPv6Fuscation%209f7b77eecf01460d8d898195f70f4790.html">21. Payload Obfuscation - IPv4/IPv6Fuscation</a></figure><figure id="8acebc37-c165-48f2-a027-9babcac9f579" class="link-to-page"><a href="MALWARE/22%20Payload%20Obfuscation%20-%20MACFucscation%208acebc37c16548f2a0279babcac9f579.html">22. Payload Obfuscation - MACFucscation</a></figure><figure id="1c2f59ca-bc35-4005-973c-f3e7692586c7" class="link-to-page"><a href="MALWARE/23%20Payload%20Obfuscation%20-%20UUIDFuscation%201c2f59cabc354005973cf3e7692586c7.html">23. Payload Obfuscation - UUIDFuscation</a></figure><figure id="1c00f7dd-2c75-47de-8995-6f25a050ea22" class="link-to-page"><a href="MALWARE/24%20Maldev%20Academy%20Tool%20-%20HellShell%201c00f7dd2c7547de89956f25a050ea22.html">24. Maldev Academy Tool - HellShell</a></figure><figure id="2e5e50ef-f602-45dd-8162-0925222710d4" class="link-to-page"><a href="MALWARE/25%20Maldev%20Academy%20Tool%20-%20MiniShell%202e5e50eff60245dd81620925222710d4.html">25. Maldev Academy Tool - MiniShell</a></figure><figure id="047762d5-d58a-4330-8c08-affcede128f9" class="link-to-page"><a href="MALWARE/26%20Local%20Payload%20Execution%20-%20DLL%20047762d5d58a43308c08affcede128f9.html">26. Local Payload Execution - DLL</a></figure><figure id="e1f075df-7aa8-4bcd-8b47-5e875c589a9b" class="link-to-page"><a href="MALWARE/27%20Local%20Payload%20Execution%20-%20Shellcode%20e1f075df7aa84bcd8b475e875c589a9b.html">27. Local Payload Execution - Shellcode</a></figure><figure id="673245a7-0556-420c-b999-c1f1cc2723a9" class="link-to-page"><a href="MALWARE/28%20Process%20Injection%20-%20DLL%20Injection%20673245a70556420cb999c1f1cc2723a9.html">28. Process Injection - DLL Injection</a></figure><figure id="462956fe-4067-4d56-baa6-65523f37bdf2" class="link-to-page"><a href="MALWARE/29%20Process%20Injection%20-%20Shellcode%20Injection%20462956fe40674d56baa665523f37bdf2.html">29. Process Injection - Shellcode Injection</a></figure><figure id="eda456e5-2641-44a5-8961-20955cee9540" class="link-to-page"><a href="MALWARE/30%20Payload%20Staging%20-%20Web%20Server%20eda456e5264144a5896120955cee9540.html">30. Payload Staging - Web Server</a></figure><figure id="e777de60-5e88-4adf-970e-64206c5d249f" class="link-to-page"><a href="MALWARE/31%20Payload%20Staging%20-%20Windows%20Registry%20e777de605e884adf970e64206c5d249f.html">31. Payload Staging - Windows Registry</a></figure><figure id="fe21c309-a829-423f-a322-29958b372dac" class="link-to-page"><a href="MALWARE/32%20Malware%20Binary%20Signing%20fe21c309a829423fa32229958b372dac.html">32. Malware Binary Signing</a></figure><figure id="68c6d61e-1bea-4011-b331-a89d300322f9" class="link-to-page"><a href="MALWARE/33%20Process%20Enumeration%20-%20EnumProcesses%2068c6d61e1bea4011b331a89d300322f9.html">33. Process Enumeration - EnumProcesses</a></figure><figure id="70484231-965b-4110-8520-d9f766477b6f" class="link-to-page"><a href="MALWARE/34%20Process%20Enumeration%20-%20NtQuerySystemInformation%2070484231965b41108520d9f766477b6f.html">34. Process Enumeration - NtQuerySystemInformation</a></figure><figure id="dfbe368a-13a8-4ee7-93d9-772723c40623" class="link-to-page"><a href="MALWARE/35%20Thread%20Hijacking%20-%20Local%20Thread%20Creation%20dfbe368a13a84ee793d9772723c40623.html">35. Thread Hijacking - Local Thread Creation</a></figure><figure id="8810a505-99cc-4cb7-a091-5dadf5cabe29" class="link-to-page"><a href="MALWARE/36%20Thread%20Hijacking%20-%20Remote%20Thread%20Creation%208810a50599cc4cb7a0915dadf5cabe29.html">36. Thread Hijacking - Remote Thread Creation</a></figure><figure id="0e5417dc-3f84-4a68-aa31-9deb6a376ce9" class="link-to-page"><a href="MALWARE/37%20Thread%20Hijacking%20-%20Local%20Thread%20Enumeration%200e5417dc3f844a68aa319deb6a376ce9.html">37. Thread Hijacking - Local Thread Enumeration</a></figure><figure id="0856586d-8db7-435f-adc7-ae2b918da7b2" class="link-to-page"><a href="MALWARE/38%20Thread%20Hijacking%20-%20Remote%20Thread%20Enumeration%200856586d8db7435fadc7ae2b918da7b2.html">38. Thread Hijacking - Remote Thread Enumeration</a></figure><figure id="86545b91-6383-4568-b0a1-97adc696666e" class="link-to-page"><a href="MALWARE/39%20APC%20Injection%2086545b9163834568b0a197adc696666e.html">39. APC Injection</a></figure><figure id="a9fb0ac0-fc46-4b7c-8a61-de3fba4d7c8c" class="link-to-page"><a href="MALWARE/40%20Early%20Bird%20APC%20Injection%20a9fb0ac0fc464b7c8a61de3fba4d7c8c.html">40. Early Bird APC Injection</a></figure><figure id="da849912-e27f-4bde-9f88-caaf4847aeb0" class="link-to-page"><a href="MALWARE/41%20Callback%20Code%20Execution%20da849912e27f4bde9f88caaf4847aeb0.html">41. Callback Code Execution</a></figure><figure id="a18ce0d4-2643-4c27-b585-cf1ddd825b70" class="link-to-page"><a href="MALWARE/42%20Local%20Mapping%20Injection%20a18ce0d426434c27b585cf1ddd825b70.html">42. Local Mapping Injection</a></figure><figure id="268ba3a4-ebcd-42e8-a6a9-9cf2c8eb88c2" class="link-to-page"><a href="MALWARE/43%20Remote%20Mapping%20Injection%20268ba3a4ebcd42e8a6a99cf2c8eb88c2.html">43. Remote Mapping Injection</a></figure><figure id="c935dd1a-71c8-4505-9628-b12d6c3cdcb8" class="link-to-page"><a href="MALWARE/44%20Local%20Function%20Stomping%20Injection%20c935dd1a71c845059628b12d6c3cdcb8.html">44. Local Function Stomping Injection</a></figure><figure id="d7942e1b-c9af-4596-8f6b-7eea69b6559e" class="link-to-page"><a href="MALWARE/45%20Remote%20Function%20Stomping%20Injection%20d7942e1bc9af45968f6b7eea69b6559e.html">45. Remote Function Stomping Injection</a></figure><figure id="169c1c94-3aed-40e0-96a4-2d7b9761c466" class="link-to-page"><a href="MALWARE/46%20Payload%20Execution%20Control%20169c1c943aed40e096a42d7b9761c466.html">46. Payload Execution Control</a></figure><figure id="5f6b6641-6524-4f62-84dd-737c7e5d823c" class="link-to-page"><a href="MALWARE/47%20Spoofing%20PPID%205f6b664165244f6284dd737c7e5d823c.html">47. Spoofing PPID</a></figure><figure id="b427dcaf-b590-4323-9840-f40c0ab8dc81" class="link-to-page"><a href="MALWARE/48%20Process%20Argument%20Spoofing%20(1)%20b427dcafb59043239840f40c0ab8dc81.html">48. Process Argument Spoofing (1)</a></figure><figure id="0f4d524b-53fa-4b2b-9d2b-2a52376a158a" class="link-to-page"><a href="MALWARE/49%20Process%20Argument%20Spoofing%20(2)%200f4d524b53fa4b2b9d2b2a52376a158a.html">49. Process Argument Spoofing (2)</a></figure><figure id="7d60ebf3-1c74-4655-b0a3-6dbbfcb8e9c1" class="link-to-page"><a href="MALWARE/50%20Parsing%20PE%20Headers%207d60ebf31c744655b0a36dbbfcb8e9c1.html">50. Parsing PE Headers</a></figure><figure id="bda15d26-efa8-4957-90b4-467721838661" class="block-color-default link-to-page"><a href="MALWARE/51%20String%20Hashing%20bda15d26efa8495790b4467721838661.html">51. String Hashing</a></figure><figure id="92083157-ed39-4993-8746-858848e5ef9d" class="link-to-page"><a href="MALWARE/52%20IAT%20Hiding%20&amp;%20Obfuscation%20-%20Introduction%2092083157ed3949938746858848e5ef9d.html">52. IAT Hiding &amp; Obfuscation - Introduction</a></figure><figure id="aa735dbf-7a4e-4c18-8c8b-6e8f8549cfea" class="link-to-page"><a href="MALWARE/53%20IAT%20Hiding%20&amp;%20Obfuscation%20-%20Custom%20GetProcAddres%20aa735dbf7a4e4c188c8b6e8f8549cfea.html">53. IAT Hiding &amp; Obfuscation - Custom GetProcAddress</a></figure><figure id="031d95fe-35cc-41ed-ac20-64756d73a043" class="link-to-page"><a href="MALWARE/54%20IAT%20Hiding%20&amp;%20Obfuscation%20-%20Custom%20GetModuleHand%20031d95fe35cc41edac2064756d73a043.html">54. IAT Hiding &amp; Obfuscation - Custom GetModuleHandle</a></figure><figure id="3fe6fb0c-de7d-41fd-b735-7575d7685be3" class="link-to-page"><a href="MALWARE/55%20IAT%20Hiding%20&amp;%20Obfuscation%20-%20API%20Hashing%203fe6fb0cde7d41fdb7357575d7685be3.html">55. IAT Hiding &amp; Obfuscation - API Hashing</a></figure><figure id="b9c801a0-0720-4fdf-a5e8-88dc127c744a" class="link-to-page"><a href="MALWARE/56%20IAT%20Hiding%20&amp;%20Obfuscation%20-%20Custom%20Pseudo%20Handle%20b9c801a007204fdfa5e888dc127c744a.html">56. IAT Hiding &amp; Obfuscation - Custom Pseudo Handles</a></figure><figure id="af3ce62d-28bb-4e0a-824b-7e3a42315d80" class="link-to-page"><a href="MALWARE/57%20IAT%20Hiding%20&amp;%20Obfuscation%20-%20Compile%20Time%20API%20Has%20af3ce62d28bb4e0a824b7e3a42315d80.html">57. IAT Hiding &amp; Obfuscation - Compile Time API Hashing</a></figure><figure id="b43ef4c2-f27a-4891-a09b-1ca65a4522fe" class="link-to-page"><a href="MALWARE/58%20API%20Hooking%20-%20Introduction%20b43ef4c2f27a4891a09b1ca65a4522fe.html">58. API Hooking - Introduction</a></figure><figure id="b06d3c8c-1d60-40d8-8647-2493a5084f2c" class="link-to-page"><a href="MALWARE/59%20API%20Hooking%20-%20Detours%20Library%20b06d3c8c1d6040d886472493a5084f2c.html">59. API Hooking - Detours Library</a></figure><figure id="c4262851-8a7f-4944-95b8-c3af9e5203f3" class="link-to-page"><a href="MALWARE/60%20API%20Hooking%20-%20Minhook%20Library%20c42628518a7f494495b8c3af9e5203f3.html">60. API Hooking - Minhook Library</a></figure><figure id="7e6302f7-1fe9-4f67-8676-0d6f2b619236" class="link-to-page"><a href="MALWARE/61%20API%20Hooking%20-%20Custom%20Code%207e6302f71fe94f6786760d6f2b619236.html">61. API Hooking - Custom Code</a></figure><figure id="f8ded5cd-b10a-45bf-badd-a982993d6bcf" class="link-to-page"><a href="MALWARE/62%20API%20Hooking%20-%20Using%20Windows%20APIs%20f8ded5cdb10a45bfbadda982993d6bcf.html">62. API Hooking - Using Windows APIs</a></figure><figure id="b8f710a9-d1a6-4ede-ac1a-bd028752da3c" class="link-to-page"><a href="MALWARE/63%20Syscalls%20-%20Introduction%20b8f710a9d1a64edeac1abd028752da3c.html">63. Syscalls - Introduction</a></figure><figure id="87428635-1a4a-4dc0-a89d-688487b2f698" class="link-to-page"><a href="MALWARE/64%20Syscalls%20-%20Userland%20Hooking%20874286351a4a4dc0a89d688487b2f698.html">64. Syscalls - Userland Hooking</a></figure><figure id="b0330e61-3e8f-4441-bb58-1226cf7412ea" class="link-to-page"><a href="MALWARE/65%20Syscalls%20-%20SysWhispers%20b0330e613e8f4441bb581226cf7412ea.html">65. Syscalls - SysWhispers</a></figure><figure id="d6268c1c-df0f-4709-ae05-a196f475974b" class="link-to-page"><a href="MALWARE/66%20Syscalls%20-%20Hell&#x27;s%20Gate%20d6268c1cdf0f4709ae05a196f475974b.html">66. Syscalls - Hell&#x27;s Gate</a></figure><figure id="a51528df-7b40-4535-9976-f170fab7b5ef" class="link-to-page"><a href="MALWARE/67%20Syscalls%20-%20Reimplementing%20Classic%20Injection%20a51528df7b4045359976f170fab7b5ef.html">67. Syscalls - Reimplementing Classic Injection</a></figure><figure id="2f2302d2-9c4b-4300-bc09-befcc91e503c" class="link-to-page"><a href="MALWARE/68%20Syscalls%20-%20Reimplementing%20Mapping%20Injection%202f2302d29c4b4300bc09befcc91e503c.html">68. Syscalls - Reimplementing Mapping Injection</a></figure><figure id="4134d6ca-e4f8-4873-8488-8ad519adc700" class="link-to-page"><a href="MALWARE/69%20Syscalls%20-%20Reimplementing%20APC%20Injection%204134d6cae4f8487384888ad519adc700.html">69. Syscalls - Reimplementing APC Injection</a></figure><figure id="f00a5764-3447-4763-babc-bad9fb8b988c" class="link-to-page"><a href="MALWARE/70%20Anti-Analysis%20-%20Introduction%20f00a576434474763babcbad9fb8b988c.html">70. Anti-Analysis - Introduction</a></figure><figure id="6e238e4d-6c41-4f8f-93da-7cc5af419566" class="link-to-page"><a href="MALWARE/71%20Anti-Debugging%20-%20Multiple%20Techniques%206e238e4d6c414f8f93da7cc5af419566.html">71. Anti-Debugging - Multiple Techniques</a></figure><figure id="97e7cad5-6b8d-474b-9798-8fb7c91703d5" class="link-to-page"><a href="MALWARE/72%20Anti-Debugging%20-%20Self-Deletion%2097e7cad56b8d474b97988fb7c91703d5.html">72. Anti-Debugging - Self-Deletion</a></figure><figure id="d3a43bd3-4060-4f05-9172-e28fd60e8dd3" class="link-to-page"><a href="MALWARE/73%20Anti-Virtual%20Environments%20-%20Multiple%20Techniques%20d3a43bd340604f059172e28fd60e8dd3.html">73. Anti-Virtual Environments - Multiple Techniques</a></figure><figure id="1a52c1ea-94be-4094-8ad1-a4b786256621" class="link-to-page"><a href="MALWARE/74%20Anti-Virtual%20Environments%20-%20Multiple%20Delay%20Exec%201a52c1ea94be40948ad1a4b786256621.html">74. Anti-Virtual Environments - Multiple Delay Execution Techniques</a></figure><figure id="65a79f84-3fa4-4243-b4b5-3e9890141f43" class="link-to-page"><a href="MALWARE/75%20Anti-Virtual%20Environments%20-%20API%20Hammering%2065a79f843fa44243b4b53e9890141f43.html">75. Anti-Virtual Environments - API Hammering</a></figure><figure id="e582eb6f-4c64-486f-9a65-6a5b9e9d993b" class="link-to-page"><a href="MALWARE/76%20Binary%20Entropy%20Reduction%20e582eb6f4c64486f9a656a5b9e9d993b.html">76. Binary Entropy Reduction</a></figure><figure id="c467f222-4963-4953-88bd-ed186d572805" class="link-to-page"><a href="MALWARE/77%20Brute%20Force%20Decryption%20c467f2224963495388bded186d572805.html">77. Brute Force Decryption</a></figure><figure id="9ed61e52-dac9-4108-a230-1370dbefb62a" class="link-to-page"><a href="MALWARE/78%20MalDev%20Academy%20Tool%20-%20KeyGuard%209ed61e52dac94108a2301370dbefb62a.html">78. MalDev Academy Tool - KeyGuard</a></figure><figure id="b216a9e9-d29b-4590-8965-68ead8916d65" class="link-to-page"><a href="MALWARE/79%20CRT%20Library%20Removal%20&amp;%20Malware%20Compiling%20b216a9e9d29b4590896568ead8916d65.html">79. CRT Library Removal &amp; Malware Compiling</a></figure><figure id="b3a27632-8446-4e8f-92cc-bb50130694b4" class="link-to-page"><a href="MALWARE/80%20IAT%20Camouflage%20b3a2763284464e8f92ccbb50130694b4.html">80. IAT Camouflage</a></figure><figure id="c8b98ed8-2881-4f89-b8db-2d5ac5a9c230" class="link-to-page"><a href="MALWARE/81%20Bypassing%20AVs%20c8b98ed828814f89b8db2d5ac5a9c230.html">81. Bypassing AVs</a></figure><figure id="f4827eb5-fb1d-4d19-8d57-5a5ad670624c" class="link-to-page"><a href="MALWARE/82%20Introduction%20To%20EDRs%20f4827eb5fb1d4d198d575a5ad670624c.html">82. Introduction To EDRs</a></figure><figure id="e62fdd6d-3088-4ac7-98da-2ab3901442cc" class="link-to-page"><a href="MALWARE/83%20NTDLL%20Unhooking%20-%20Introduction%20e62fdd6d30884ac798da2ab3901442cc.html">83. NTDLL Unhooking - Introduction</a></figure><figure id="8aeadeff-47ae-40f2-bf19-0a32b0678f0a" class="link-to-page"><a href="MALWARE/84%20NTDLL%20Unhooking%20-%20From%20Disk%208aeadeff47ae40f2bf190a32b0678f0a.html">84. NTDLL Unhooking - From Disk</a></figure><figure id="db89a0c0-abe5-4a79-9e98-16e7a2237546" class="link-to-page"><a href="MALWARE/85%20NTDLL%20Unhooking%20-%20From%20KnownDlls%20Directory%20db89a0c0abe54a799e9816e7a2237546.html">85. NTDLL Unhooking - From KnownDlls Directory</a></figure><figure id="b586e5f7-6b06-4f63-a867-c116853ff11a" class="link-to-page"><a href="MALWARE/86%20NTDLL%20Unhooking%20-%20From%20a%20Suspended%20Process%20b586e5f76b064f63a867c116853ff11a.html">86. NTDLL Unhooking - From a Suspended Process</a></figure><figure id="d1bcc5c3-167c-4308-8e31-dd211efded76" class="link-to-page"><a href="MALWARE/87%20NTDLL%20Unhooking%20-%20From%20a%20Web%20Server%20d1bcc5c3167c43088e31dd211efded76.html">87. NTDLL Unhooking - From a Web Server</a></figure><figure id="fe071448-7128-4371-a5c3-1d710c3c2a4f" class="link-to-page"><a href="MALWARE/88%20Updating%20Hell&#x27;s%20Gate%20fe07144871284371a5c31d710c3c2a4f.html">88. Updating Hell&#x27;s Gate</a></figure><figure id="94f45eeb-837f-4eb6-829f-55eb1d6c20dc" class="link-to-page"><a href="MALWARE/89%20Indirect%20Syscalls%20-%20HellsHall%2094f45eeb837f4eb6829f55eb1d6c20dc.html">89. Indirect Syscalls - HellsHall</a></figure><figure id="cf46e560-a7fc-47bc-bb2c-0ad81f874be6" class="link-to-page"><a href="MALWARE/90%20Block%20DLL%20Policy%20cf46e560a7fc47bcbb2c0ad81f874be6.html">90. Block DLL Policy</a></figure><figure id="9128d84d-1c2f-4993-9aef-fccbc228565b" class="link-to-page"><a href="MALWARE/91%20Diving%20Into%20NtCreateUserProcess%209128d84d1c2f49939aeffccbc228565b.html">91. Diving Into NtCreateUserProcess</a></figure><br>
 
 
-        <!--===== SCROLL REVEAL =====-->
-        <script src="https://unpkg.com/scrollreveal"></script>
 
-        <!--===== MAIN JS =====-->
-        <script src="assets/js/main.js"></script>
-    </body>
-</html>
+
+
+
